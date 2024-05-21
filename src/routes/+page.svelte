@@ -7,7 +7,9 @@
     <div class="p-14">
         <img src="/img/logo.png" alt="">
     </div>
-    <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/LAjncmZCp99m7gOJwI" width="100%" height="100%" style="position:absolute" title="A la carta" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+    <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
+        <iframe src="https://giphy.com/embed/LAjncmZCp99m7gOJwI" width="100%" height="100%" style="position:absolute; pointer-events: none;" title="A la carta" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>    
     <div class="text-2xl text-center font-bold font-sans p-10">
         <p>Tu aliado <span class="text-orange-500">estratégico</span> para el éxito en el sector restaurantero</p>
         
@@ -137,22 +139,27 @@
         <div class="border-b-4 border-r-4 w-1/12 h-7 border-solid border-orange-600"></div>
     </div>
 </section>
-<section id="diseno" class="p-2 my-2">
+<section id="imagen" class="p-2 my-2">
     <div class="flex">
         <div class="border-t-4 border-l-4 w-1/12 h-7 border-solid border-orange-600"></div>
         <div class="grow"></div>
         <div class="border-t-4 border-r-4 w-1/12 h-7 border-solid border-orange-600"></div>
     </div>
     <div class="flex flex-col">
-        <p class="my-4 mx-2 w-3/4 uppercase font-black font-protest text-4xl text-left">Contultoría e imagen</p>
-        <p class="text-2xl mx-2 font-extralight text-justify">Asesoramiento en la creación y gestión de la imagen de tu
-            marca.
-            Desarrollo de estrategias para diferenciarte de la
-            competencia y posicionarte en el mercado.
-            Análisis de tu público objetivo y creación de estrategias para
-            fidelizarlo.
-            Implementación de mejoras en la experiencia del cliente para
-            aumentar la satisfacción y la rentabilidad.</p>
+        <p class="my-4 mx-2 w-3/4 uppercase font-black font-protest text-4xl text-left">Consultoría e imagen</p>
+        <div class="text-2xl mx-2 font-extralight text-justify">
+            <ul class="list-disc ml-6 mr-4">
+                <li class="my-1">Costeo y estandarización de recetas y procesos que facilita el cálculo de márgenes de ganancia, permitiendo una mejor planificación financiera y de precios.</li>
+                <li class="my-1">Asesoramiento en la creación y gestión de la imagen de tu
+                marca.</li>
+                <li class="my-1">Desarrollo de estrategias para diferenciarte de la
+                competencia y posicionarte en el mercado.</li>
+                <li class="my-1">Análisis de tu público objetivo y creación de estrategias para
+                fidelizarlo.</li>
+                <li class="my-1">Implementación de mejoras en la experiencia del cliente para
+                aumentar la satisfacción y la rentabilidad.</li>
+            </ul>
+        </div>
     </div>
     <div class="flex">
         <div class="border-b-4 border-l-4 w-1/12 h-7 border-solid border-orange-600"></div>
@@ -160,7 +167,7 @@
         <div class="border-b-4 border-r-4 w-1/12 h-7 border-solid border-orange-600"></div>
     </div>
 </section>
-<section id="diseno" class="p-2 my-2">
+<section id="clientes" class="p-2 my-2">
     <div class="flex">
         <div class="border-t-4 border-l-4 w-1/12 h-7 border-solid border-orange-600"></div>
         <div class="grow"></div>
@@ -182,6 +189,27 @@
         <div class="border-b-4 border-l-4 w-1/12 h-7 border-solid border-orange-600"></div>
         <div class="grow"></div>
         <div class="border-b-4 border-r-4 w-1/12 h-7 border-solid border-orange-600"></div>
+    </div>
+</section>
+<section id="contacto" class="p-2 my-2">
+    <div class="flex">
+        <div class="border-t-4 border-l-4 w-1/12 h-7 border-solid border-black"></div>
+        <div class="grow"></div>
+        <div class="border-t-4 border-r-4 w-1/12 h-7 border-solid border-black"></div>
+    </div>
+    <div class="flex flex-col">
+        <p class="my-4 mx-2 uppercase font-black font-protest text-4xl text-carta text-center">¿quiéres saber más?</p>
+    </div>
+    <div class="flex flex-col">
+        <p class="text-2xl mx-6 font-extralight text-justify">Contáctanos hoy mismo y descubre cómo podemos ayudarte a hacer crecer tu negocio.</p>
+    </div>
+    <div class="flex justify-center">
+        <a href="https://wa.me/5216671606417" class="text-center"><i class="fa-brands text-green-500 text-8xl fa-whatsapp"></i></a>
+    </div>
+    <div class="flex mb-20">
+        <div class="border-b-4 border-l-4 w-1/12 h-7 border-solid border-black"></div>
+        <div class="grow"></div>
+        <div class="border-b-4 border-r-4 w-1/12 h-7 border-solid border-black"></div>
     </div>
 </section>
 <GotoTop />
