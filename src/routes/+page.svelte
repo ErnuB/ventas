@@ -1,6 +1,20 @@
 <script>
+	import Cotizador from "./Cotizador.svelte";
 	import Footer from "./Footer.svelte";
     import GotoTop from "./GotoTop.svelte";
+
+    let mostrarCotizador = false;
+    let clave = '';
+    let claveCorrecta = 'AlaCarta!2024';
+    let claveIntroducida = '';
+
+    function verificarClave() {
+        if (claveIntroducida === claveCorrecta) {
+            mostrarCotizador = true;
+        } else {
+            alert('Clave incorrecta');
+        }
+    }
 
 </script>
 <header class="bg-carta">
@@ -126,7 +140,7 @@
         <p class="text-2xl mx-2 font-extralight text-justify">El 63% de los consumidores confía más en las marcas que
             tienen una presencia sólida en las redes sociales, pero
             atenderlas tú mismo puede ser una tarea difícil, deja que
-            nuestro profesionales te ayuden a crear una estrategia de
+            nuestros profesionales te ayuden a crear una estrategia de
             comunicación sólida y eficiente que invite a todo mundo a tu
             restaurante.</p>
         <img src="/img/rrss.png" alt="">
@@ -176,14 +190,29 @@
     <div class="flex flex-col">
         <p class="my-4 mx-2 uppercase font-black font-protest text-4xl text-carta text-center">Nuestros clientes</p>
     </div>
-    <div class="flex flex-wrap justify-center items-center gap-3">
+    <div class="flex flex-wrap justify-around items-center gap-3">
         <a href="https://naranya.alacarta.com.mx" target="blank" class="w-1/4"><img src="/img/logo-naranya.png" alt=""></a>
         <a href="https://lalimita.com/menu-digital" target="blank" class="w-2/5"><img src="/img/logo-limita.png" alt=""></a>
         <a href="https://cowfish.alacarta.com.mx" target="blank" class="w-1/4"><img src="/img/logo-cow.png" alt=""></a>
         <a href="https://acuario.alacarta.com.mx" target="blank" class="w-1/4"><img src="/img/logo-acuario.png" alt=""></a>
         <a href="https://labruneta.alacarta.com.mx" target="blank" class="w-2/5"><img src="/img/logo-bruneta.png" alt=""></a>
         <a href="https://molcajeteria.alacarta.com.mx" target="blank" class="w-1/4"><img src="/img/logo-molcajeteria.png" alt=""></a>
-        <a href="https://la-pradera.alacarta.com.mx" target="blank" class="w-2/5"><img src="/img/logo-pradera.png" alt=""></a>
+        <a href="https://la-pradera.alacarta.com.mx" target="blank" class="w-1/4"><img src="/img/logo-pradera.png" alt=""></a>
+        <a href="https://el-aventurero.alacarta.com.mx" target="blank" class="w-1/4"><img src="/img/logo-aventurero.png" alt=""></a>
+        <a href="https://jc-ciobes.alacarta.com.mx/" target="blank" class="w-1/4"><img src="/img/logo-ciobes.png" alt=""></a>
+        <a href="https://lafinca.alacarta.com.mx/" target="blank" class="w-2/5"><img src="/img/logo-finca.png" alt=""></a>
+        <a href="https://alicletas.alacarta.com.mx" target="blank" class="w-2/5"><img src="/img/logo-alicletas.png" alt=""></a>
+        <a href="https://latorcua.alacarta.com.mx/" target="blank" class="w-1/4"><img src="/img/logo-torcua.png" alt=""></a>
+        <a href="https://mimocorito.alacarta.com.mx" target="blank" class="w-2/5"><img src="/img/logo-mimocorito.png" alt=""></a>
+        <a href="https://maizal-sinaloense.alacarta.com.mx/" target="blank" class="w-1/4"><img src="/img/logo-maizal.png" alt=""></a>
+        <a href="https://mucha-vida.alacarta.com.mx/" target="blank" class="w-1/4"><img src="/img/logo-mucha-vida.png" alt=""></a>
+        <a href="https://nanasnyc.alacarta.com.mx/" target="blank" class="w-1/4"><img src="/img/nanas-logo.jpg" alt=""></a>
+        <a href="https://mr-leos.alacarta.com.mx/" target="blank" class="w-1/4"><img src="/img/logo-mrleos.png" alt=""></a>
+        <a href="https://odettecafe.alacarta.com.mx/" target="blank" class="w-1/4"><img src="/img/logo-odette.png" alt=""></a>
+        <a href="https://omar-to-goo.alacarta.com.mx/" target="blank" class="w-2/5"><img src="/img/logo-omar.png" alt=""></a>
+        <a href="https://streetdogs.alacarta.com.mx/" target="blank" class="w-1/4"><img src="/img/logo-streetdog.png" alt=""></a>
+        <a href="https://ranch-pizza.alacarta.com.mx/" target="blank" class="w-1/4 p-2"><img src="/img/logo-ranch.png" alt=""></a>
+        <a href="https://tamazula.alacarta.com.mx/" target="blank" class="w-2/5"><img src="/img/logo-birrias-tamazula.png" alt=""></a>
     </div>
     <div class="flex">
         <div class="border-b-4 border-l-4 w-1/12 h-7 border-solid border-orange-600"></div>
@@ -212,5 +241,19 @@
         <div class="border-b-4 border-r-4 w-1/12 h-7 border-solid border-black"></div>
     </div>
 </section>
+<div class="p-4 bg-gray-100 min-h-screen">
+    {#if !mostrarCotizador}
+        <div class="mb-4">
+            <label for="clave" class="block text-sm font-medium text-gray-700">Introduce la clave</label>
+            <input type="password" id="clave" bind:value={claveIntroducida} class="mt-1 block w-full rounded border-gray-300 shadow-sm" />
+        </div>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded" on:click={verificarClave}>Abrir Cotizador</button>
+    {/if}
+
+    {#if mostrarCotizador}
+        <Cotizador />
+    {/if}
+</div>
+<div class="mb-40">.</div>
 <GotoTop />
 <Footer />
