@@ -71,7 +71,6 @@
 </style>
 
 <div class="p-4 bg-white rounded shadow-lg">
-    <h2 class="text-3xl font-protest mb-4">Cotizador</h2>
     <div class="mb-4">
         <label for="platillosSinFoto" class="block text-2xl mx-2 font-extralight text-gray-700">Platillos (sin foto)</label>
         <input type="number" id="platillosSinFoto" bind:value={platillosSinFoto} class="mt-1 px-3 text-xl block w-3/4 rounded border-gray-500 border-solid border-[1px] shadow-sm" min="0" />
